@@ -388,8 +388,15 @@
             <section>
                 <form action="#">
                 <h3 class="footer-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
-                    <input type="email" class="form-imput" name="email" placeholder="E-mail" autofocus required>
-                    <button type="submit" class="footer-btn cursor btn ">Подписаться</button>
+                        <div class="footer-input-wrap">
+                            <input type="email" class="footer-form-imput" name="email" placeholder="E-mail" required>
+                            <button type="submit" class="footer-btn cursor btn">
+                                Подписаться
+                                <svg class="footer-send-icon">
+                                    <use href="./images/icons.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                        </div>
                 </form>
             </section>
         </div>
@@ -407,34 +414,30 @@
             <form action="#">
                 <div>
                     <label for="user-name" class="modal-user">Имя</label>
-                    <input 
-                    type="text"
-                    class="form-imput"
-                    name="user-name"
-                    id="user-name"
-                    placeholder="Иван Иванович"
-                    autofocus
-                    required>
+                        <div class="input-wrap">
+                            <input type="text" class="form-imput" name="user-name" id="user-name" placeholder="Иван Иванович" autofocus required>
+                            <svg class="imput-icon">
+                                <use href="./images/icons.svg#icon-person"></use>
+                            </svg>
+                        </div>
                 </div>
                 <div>
                     <label for="user-tel" class="modal-user">Телефон</label>
-                    <input type="tel" 
-                    class="form-imput" 
-                    name="user-tel" 
-                    id="user-tel"
-                    placeholder="+380961111111"
-                    autofocus
-                    required>
+                    <div class="input-wrap">
+                        <input type="tel" class="form-imput" name="user-tel" id="user-tel" placeholder="+380961111111" autofocus required>
+                        <svg class="imput-icon">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>
                 </div>
                 <div>
                     <label for="user-email" class="modal-user">Почта</label>
-                    <input type="email" 
-                    class="form-imput" 
-                    name="user-email" 
-                    id="user-email"
-                    placeholder="test@mail.com"
-                    autofocus
-                    required>
+                    <div class="input-wrap">
+                        <input type="email" class="form-imput" name="user-email" id="user-email" placeholder="test@mail.com" autofocus required>
+                        <svg class="imput-icon">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                    </div>
                 </div>
                 <div>
                     <label for="comment" class="modal-textarea">Коментарий</label>
@@ -446,9 +449,10 @@
                 <div>
                     <input type="checkbox" 
                     name="policy"
-                    id="policy">
-                    <label for="policy" class="text-checkbox">Соглашаюсь с рассылкой и принимаю
-                        <a href="#" class="modal-link link">Условия договора</a>
+                    id="policy"
+                    class="policy-check hidden-title">
+                    <label for="policy" class="text-checkbox">Соглашаюсь с рассылкой и принимаю 
+                        <a href="#" class="modal-link link"> Условия договора</a>
                     </label>
                 </div>
                 <button type="submit" class="modal-btn cursor btn">Отправить</button>
