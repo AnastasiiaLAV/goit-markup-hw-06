@@ -803,23 +803,30 @@ body {
   margin-bottom: 30px;
 }
 
-.text-checkbox::before {
-  content: '';
+.text-checkbox span {
   width: 16px;
   height: 15px;
 
   border: 2px solid var(--title-color);
   border-radius: 2px;
-
-  /* margin-right: 7px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.policy-check:checked + .text-checkbox::before {
+.icon-check {
+  width: 16px;
+  height: 15px;
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.policy-check:checked + .text-checkbox span {
   border: none;
-  background-image: url(../images/icon-check.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: var(--accent-color);
 }
+.policy-check:checked + .text-checkbox .icon-check {
+  fill: var(--header-color);
+}
+
 .modal-link {
   font-size: 14px;
   line-height: 1.71;
